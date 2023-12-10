@@ -48,20 +48,26 @@ const EmployeeForm = ({addEmployee, newEmployee, setNewEmployee}) => {
 
   return (
     <View style={styles.container}>
-      <Text>Add New Employee</Text>
+      <Text style={styles.text}>Add New Employee</Text>
       <TextInput
+        style={styles.text}
         placeholder="Name"
+        placeholderTextColor="grey"
         value={newEmployee.name}
         onChangeText={text => setNewEmployee({...newEmployee, name: text})}
       />
       <TextInput
+        style={styles.text}
         placeholder="Email"
+        placeholderTextColor="grey"
         value={newEmployee.email}
         onChangeText={text => setNewEmployee({...newEmployee, email: text})}
         keyboardType="email-address"
       />
       <TextInput
+        style={styles.text}
         placeholder="Phone"
+        placeholderTextColor="grey"
         value={newEmployee.phone}
         onChangeText={text => setNewEmployee({...newEmployee, phone: text})}
         keyboardType="numeric"
@@ -199,6 +205,9 @@ export default EmployeeList;
 const styles = StyleSheet.create({
   container: {
     margin: 16,
+  },
+  text: {
+    color: 'black',
   },
   headerButtonContainer: {
     marginRight: 16,
